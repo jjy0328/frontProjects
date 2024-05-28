@@ -4,16 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medium</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('html/contents.html')
-                .then(response => response.text())
-                .then(data => document.getElementById('content').innerHTML = data)
-                .catch(error => console.error('Error fetching the content:', error));
-        });
-    </script>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div id="content"></div>
+    <div class="header-position">
+        <img class="logo" src="../images/medium_logo.svg" alt="Medium Logo">
+        <div class="search-box">
+            <img class="search-icon" src="../images/searching.png" alt="Search Icon">
+            <input type="text" class="search-input" placeholder="Search">
+        </div>
+        <div class="icon-container">
+            <img class="icon" src="../images/edit.png" alt="Bookmark Icon">
+            <img class="icon" src="../images/notification.png" alt="Notification Icon">
+            <img class="icon" src="../images/profile.png" alt="Profile Icon">
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="side-container">
+            <div class="staff-recommend-container">
+                <p class="staff-recommend-title">Staff Picks</p>
+            </div>
+            <div class="recommend-topic-container">
+
+            </div>
+            <div class="recommend-follower-container">
+
+            </div>
+            <div class="recentlly-saved-contaier">
+
+            </div>
+        </div>
+        <div class="category-container">
+            Category
+        </div>
+        <div class="contents-wrapper">
+            Blog
+        </div>
+    </div>
 </body>
 </html>
