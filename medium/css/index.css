@@ -4,17 +4,19 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
 /* header */ 
 .header-position {
-    position: absolute; /* 고정 */
     width: 100%; /* div에 너비 지정 */
     height: 50px; /* 높이 지정 */
-    top: 0; /* 상단 고정 */
-    left: 0;
-    z-index: 1000; /* 다른 컨텐츠 위에 있도록 설정 */
     display: flex; /* Flexbox 사용 */
     align-items: center; /* 수직 가운데 정렬 */
     padding: 0 20px; /* 좌우 여백 추가 */
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -30,7 +32,6 @@
     border: none; /* 테두리 추가 */
     border-radius: 15px; /* 모서리 둥글게 */
     background-color: #ededed; /* 배경색 */
-    float:left; /* 왼쪽 정렬 */
 }
 
 .search-input {
@@ -54,63 +55,178 @@
     margin-left: auto; /* 오른쪽 끝으로 이동 */
 }
 
-.icon{
+.icon {
     width: 20px; /* 원하는 크기로 설정 */
     height: auto; /* 원하는 크기로 설정 */
-    margin-right: 10px; /* 로고와 입력 필드 사이에 간격 추가 */
+    cursor: pointer; /* 클릭 가능한 아이콘 */
 }
 
-/* side bar */ 
+/* 사이드바 */
 .side-container {
     position: absolute; /* 고정 */
-    width: 30%;
-    height: 100vh; /* 헤더 제외 화면 크기에 맞게 고정 */
+    width: 30%; /* 너비 설정 */
+    height: 100vh; /* 화면 크기에 맞게 고정 */
     right: 0; /* 오른쪽 정렬 */
     top: 50px; /* 헤더 아래에 위치 */
-    margin-top: 20px; /* 상단 여백 추가 */
-    padding-left: 30px; /* 좌측 여백 추가 */
+    transition: all 0.3s ease; /* 부드러운 전환 효과 */
 }
 
-.staff-recommend-container {
-    background-color: lightyellow;
-    height: 30vh;
+/* 미디어 쿼리 */
+@media (max-width: 768px) {
+    .side-container {
+        display: none; /* 창이 좁아지면 사이드바 숨김 */
+    }
 }
 
-.recommend-topic-container {
-    background-color: lightpink;
-    height: 30vh;
-}
-
-.recommend-follower-container {
-    background-color: lightgreen;
-    height: 30vh;
-}
-
-.recentlly-saved-contaier {
-    background-color: lightseagreen;
-    height: 30vh;
+/* 반응형 레이아웃 */
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* 화면 크기에 따라 줄 바꿈 */
+    padding: 20px;
 }
 
 .category-container {
-    position: absolute;
     background-color: orange;
-    width: 70%; 
-    height: 70px; 
-    top: 50px; 
-    left: 0;
+    flex: 1 1 70%;
+    padding: 10px;
 }
 
-/* blog contents */
 .contents-wrapper {
     background-color: lightblue;
-    width: 70%;
-    height: auto;
-    margin-top: 120px; /* 헤더와 카테고리 아래에 위치 */
-    margin-right: 30%; /* 사이드바를 위한 공간 확보 */
-    padding: 20px; /* 컨텐츠에 여백 추가 */
-    box-sizing: border-box; /* 패딩과 테두리를 너비/높이 계산에 포함 */
+    flex: 1 1 70%;
+    padding: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
 }
 
-.main-wrapper {
-    overflow: hidden; /* 콘텐츠 오버플로 방지 */
+/* 추천 콘텐츠 스타일 */
+.recommend-content-container-large, .recommend-content-container-small {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recommend-content-container-large {
+    height: 30vh; /* 높이 설정 */
+}
+
+.recommend-content-container-small {
+    background-color: thistle;
+    height: 30vh; /* 높이 설정 */
+}
+
+.content-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.link-more-recommend {
+    color: rgb(28, 144, 2); /* 선택사항: 텍스트 색상 설정 */
+    font-size: 13px;
+    text-decoration: none; /* 밑줄 제거 */
+    margin-top: 10px; /* 위쪽 여백 추가 */
+}
+
+/* Staff Recommendations */
+.staff-recommend-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.staff-recommend-user {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.profile-name {
+    margin: 0;
+}
+
+.profile-description {
+    font-weight: bold;
+    margin: 0;
+    padding-top: 5px;
+}
+
+/* Topics */
+.topic-container {
+    display: flex;
+    flex-wrap: wrap; /* 요소가 넘칠 때 줄바꿈 */
+    gap: 10px; /* 요소 사이 간격 */
+}
+
+.topic {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Follow Section */
+.follow-container {
+    padding: 20px;
+}
+
+.follow-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.follow-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.follow-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.follow-text-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.follow-name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.follow-description {
+    margin: 0;
+}
+
+.follow-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow-text {
+    margin: 0;
 }
