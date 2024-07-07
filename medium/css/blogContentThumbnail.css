@@ -1,0 +1,91 @@
+/* blogContentThumbnail.css */
+
+.blog-content-thumbnail {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.blog-content-profile img.profile {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.blog-content-profile .profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-content-profile .profile-info .profile-name {
+  font-weight: bold;
+}
+
+.blog-content-profile .profile-info .forum-name {
+  color: #666;
+}
+
+.content-section h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.content-section p {
+  margin: 8px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.content-section img.thumbnail {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.meta-section {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.meta-section .date,
+.meta-section .likes-container,
+.meta-section .comments-container {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  font-size: 0.9em;
+  color: #999;
+}
+
+.meta-section .likes-container i,
+.meta-section .comments-container i {
+  margin-right: 5px;
+  color: #e74c3c;
+}
+
+.icon-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.icon-section .icon {
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #666;
+}
