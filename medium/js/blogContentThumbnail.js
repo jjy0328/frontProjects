@@ -16,44 +16,38 @@ function createBlogContentThumbnail(
   const profileSection = document.createElement("div");
   profileSection.className = "blog-content-profile";
 
-  const profileImg = document.createElement("img");
-  profileImg.src = profileImgSrc;
-  profileImg.alt = nickname;
-
   const profileInfo = document.createElement("div");
   profileInfo.className = "profile-info";
+
+  const profileImg = document.createElement("img");
+  profileImg.className = "profile";
+  profileImg.src = profileImgSrc;
+  profileImg.alt = nickname;
 
   const profileName = document.createElement("span");
   profileName.className = "profile-name";
   profileName.textContent = nickname;
 
-  const forum = document.createElement("span");
-  forum.className = "forum-name";
-  forum.textContent = `in ${forumName}`;
-
+  profileInfo.appendChild(profileImg);
   profileInfo.appendChild(profileName);
-  profileInfo.appendChild(forum);
-  profileSection.appendChild(profileImg);
   profileSection.appendChild(profileInfo);
+
+  // 콘텐츠 정보 섹션
+  const contentInfoSection = document.createElement("div");
+  contentInfoSection.className = "content-info";
 
   // 콘텐츠 섹션
   const contentSection = document.createElement("div");
   contentSection.className = "content-section";
 
-  const title = document.createElement("h3");
+  const title = document.createElement("h2");
   title.textContent = titleText;
 
   const excerpt = document.createElement("p");
   excerpt.textContent = excerptText;
 
-  const thumbnailImg = document.createElement("img");
-  thumbnailImg.className = "thumbnail";
-  thumbnailImg.src = thumbnailImgSrc;
-  thumbnailImg.alt = titleText;
-
   contentSection.appendChild(title);
   contentSection.appendChild(excerpt);
-  contentSection.appendChild(thumbnailImg);
 
   // 메타 섹션
   const metaSection = document.createElement("div");
@@ -101,10 +95,25 @@ function createBlogContentThumbnail(
     iconSection.appendChild(icon);
   });
 
+  contentInfoSection.appendChild(contentSection);
+  contentInfoSection.appendChild(metaSection);
+  contentInfoSection.appendChild(iconSection);
+
+  // 이미지와 콘텐츠를 묶는 섹션
+  const thumbnailContentWrapper = document.createElement("div");
+  thumbnailContentWrapper.className = "thumbnail-content-wrapper";
+
+  // 썸네일 이미지
+  const thumbnailImg = document.createElement("img");
+  thumbnailImg.className = "thumbnail";
+  thumbnailImg.src = thumbnailImgSrc;
+  thumbnailImg.alt = titleText;
+
+  thumbnailContentWrapper.appendChild(contentInfoSection);
+  thumbnailContentWrapper.appendChild(thumbnailImg);
+
   thumbnail.appendChild(profileSection);
-  thumbnail.appendChild(contentSection);
-  thumbnail.appendChild(metaSection);
-  thumbnail.appendChild(iconSection);
+  thumbnail.appendChild(thumbnailContentWrapper);
 
   return thumbnail;
 }
