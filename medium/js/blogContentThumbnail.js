@@ -1,7 +1,6 @@
 function createBlogContentThumbnail(
   profileImgSrc,
   nickname,
-  forumName,
   titleText,
   excerptText,
   thumbnailImgSrc,
@@ -79,10 +78,6 @@ function createBlogContentThumbnail(
   commentsContainer.appendChild(commentsIcon);
   commentsContainer.appendChild(comments);
 
-  metaSection.appendChild(date);
-  metaSection.appendChild(likesContainer);
-  metaSection.appendChild(commentsContainer);
-
   // 아이콘 섹션 추가
   const iconSection = document.createElement("div");
   iconSection.className = "icon-section";
@@ -95,9 +90,13 @@ function createBlogContentThumbnail(
     iconSection.appendChild(icon);
   });
 
+  metaSection.appendChild(date);
+  metaSection.appendChild(likesContainer);
+  metaSection.appendChild(commentsContainer);
+  metaSection.appendChild(iconSection);
+
   contentInfoSection.appendChild(contentSection);
   contentInfoSection.appendChild(metaSection);
-  contentInfoSection.appendChild(iconSection);
 
   // 이미지와 콘텐츠를 묶는 섹션
   const thumbnailContentWrapper = document.createElement("div");

@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".blog-content-container");
-  const thumbnailsData = Array(33).fill({
+  const thumbnailsData = Array(10).fill({
     profileImgSrc: "./images/content.png", // 프로필 이미지 경로
     nickname: "Plaban Nayak", // 닉네임
-    forumName: "The AI Forum", // 포럼 이름
     titleText: "Build A Financial Analyst Agent Using CrewAI and LlamaIndex", // 블로그 제목
     excerptText: "Introduction", // 블로그 컨텐츠 첫 문장
     thumbnailImgSrc: "path/to/thumbnail.jpg", // 썸네일 이미지 경로
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const thumbnail = createBlogContentThumbnail(
       data.profileImgSrc,
       data.nickname,
-      data.forumName,
       data.titleText,
       data.excerptText,
       data.thumbnailImgSrc,
@@ -29,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".blog-content-container");
-  const thumbnailsData = Array(33).fill({
+  const thumbnailsData = Array(10).fill({
     profileImgSrc: "./images/content.png", // 프로필 이미지 경로
     nickname: "Plaban Nayak", // 닉네임
     titleText: "Build A Financial Analyst Agent Using CrewAI and LlamaIndex", // 블로그 제목
