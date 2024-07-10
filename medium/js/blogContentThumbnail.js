@@ -1,4 +1,4 @@
-function createBlogContentThumbnail(
+export function createBlogContentThumbnail(
   profileImgSrc,
   nickname,
   titleText,
