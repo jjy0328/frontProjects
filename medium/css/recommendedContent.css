@@ -1,23 +1,25 @@
 .recommended-topic-header {
   width: 100%;
   height: 15%;
-  background-color: #beadfa;
   display: flex;
+  align-items: flex-end;
+  margin-top: 8%;
 }
 
 .recommended-topic-section {
   width: 100%;
-  height: 75%;
+  height: 50%;
   display: flex;
-  background-color: #d0bfff;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
   flex-wrap: wrap;
-  align-content: flex-start; /* 요소들을 상단에 정렬 */
+  align-content: center; /* 요소들을 상단에 정렬 */
 }
 
 .recommended-topic {
-  display: inline-flex;
-  height: fit-content;
-  padding: 8px 16px;
+  display: flex;
+  padding: 8px 25px;
   color: black;
   border-radius: 25px;
   font-size: 16px;
@@ -29,5 +31,5 @@
 .recommended-topic-footer {
   width: 100%;
   height: 10%;
-  background-color: #dfccfb;
+  margin-top: 3%;
 }

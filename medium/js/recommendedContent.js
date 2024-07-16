@@ -1,5 +1,5 @@
 export function recommendTopic(header, topics, footer) {
-  const recommendedTopicHeader = document.createElement("div");
+  const recommendedTopicHeader = document.createElement("h4");
   recommendedTopicHeader.className = "recommended-topic-header";
   recommendedTopicHeader.textContent = header;
 
