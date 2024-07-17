@@ -1,5 +1,6 @@
 import { createBlogContentThumbnail } from "./blogContentThumbnail.js";
-import { recommendTopic } from "./recommendedContent.js";
+import { recommendTopic } from "./recommendedTopics.js";
+import { recommendStaffPick } from "./recommendedStaffPick.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   // 블로그 콘텐츠 썸네일을 추가하는 함수 호출
@@ -50,4 +51,33 @@ document.addEventListener("DOMContentLoaded", function () {
   topicsContainer.appendChild(topicHeaderElement);
   topicsContainer.appendChild(topicSectionElement);
   topicsContainer.appendChild(topicFooterElement);
+
+  // 스태프 추천 섹션을 추가하는 함수 호출
+  const staffPickContainer = document.querySelector(".staff-pick-container");
+  const staffPickHeaderText = "Staff Pick";
+  const staffPickFooterText = "See more full list";
+
+  const staffPickData = Array(3).fill({
+    staffPickProfileImgSrc: "./images/profile.png",
+    staffPickNickname: "John Doe",
+    staffPickTitleText: "How to Build a Web Application",
+  });
+
+  staffPickData.forEach((data) => {
+    const {
+      staffPickHeaderElement,
+      staffPickSectionElement,
+      staffPickFooterElement,
+    } = recommendStaffPick(
+      staffPickHeaderText,
+      data.staffPickProfileImgSrc,
+      data.staffPickNickname,
+      data.staffPickTitleText,
+      staffPickFooterText
+    );
+
+    staffPickContainer.appendChild(staffPickHeaderElement);
+    staffPickContainer.appendChild(staffPickSectionElement);
+    staffPickContainer.appendChild(staffPickFooterElement);
+  });
 });
