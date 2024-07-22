@@ -4,6 +4,7 @@
   display: flex;
   align-items: flex-end;
   margin-top: 8%;
+  padding-left: 8%; /* 왼쪽 패딩 추가 */
 }
 
 .recommended-topic-section {
@@ -15,6 +16,7 @@
   box-sizing: border-box;
   flex-wrap: wrap;
   align-content: center; /* 요소들을 상단에 정렬 */
+  padding-left: 8%; /* 왼쪽 패딩 추가 */
 }
 
 .recommended-topic {

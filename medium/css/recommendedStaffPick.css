@@ -1,0 +1,39 @@
+.staff-pick-header {
+  width: 100%;
+  height: 50px; /* 높이를 픽셀 단위로 설정 */
+  background-color: aqua;
+}
+
+.staff-pick-section {
+  width: 100%;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.staff-pick-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.staff-pick-profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.staff-pick-profile-name {
+  font-weight: bold;
+}
+
+.staff-pick-item {
+  margin-bottom: 10px;
+}
+
+.staff-pick-footer {
+  width: 100%;
+  background-color: lightcoral;
+  text-align: center;
+  padding: 10px;
+}

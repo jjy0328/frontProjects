@@ -53,10 +53,24 @@ document.addEventListener("DOMContentLoaded", function () {
   topicsContainer.appendChild(topicFooterElement);
 
   // 스태프 추천 섹션을 추가하는 함수 호출
-  const staffPickContainer = document.querySelector(".staff-pick-container");
+  const staffPickContainer = document.querySelector(
+    ".staff-recommend-container"
+  );
   const staffPickHeaderText = "Staff Pick";
   const staffPickFooterText = "See more full list";
 
+  // 스태프 추천 헤더와 푸터 추가
+  const { staffPickHeaderElement, staffPickFooterElement } = recommendStaffPick(
+    staffPickHeaderText,
+    "",
+    "",
+    "",
+    staffPickFooterText
+  );
+
+  staffPickContainer.appendChild(staffPickHeaderElement);
+
+  // 스태프 추천 항목 추가
   const staffPickData = Array(3).fill({
     staffPickProfileImgSrc: "./images/profile.png",
     staffPickNickname: "John Doe",
@@ -64,20 +78,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   staffPickData.forEach((data) => {
-    const {
-      staffPickHeaderElement,
-      staffPickSectionElement,
-      staffPickFooterElement,
-    } = recommendStaffPick(
-      staffPickHeaderText,
+    const { staffPickSectionElement } = recommendStaffPick(
+      "",
       data.staffPickProfileImgSrc,
       data.staffPickNickname,
       data.staffPickTitleText,
-      staffPickFooterText
+      ""
     );
 
-    staffPickContainer.appendChild(staffPickHeaderElement);
     staffPickContainer.appendChild(staffPickSectionElement);
-    staffPickContainer.appendChild(staffPickFooterElement);
   });
+
+  staffPickContainer.appendChild(staffPickFooterElement);
 });

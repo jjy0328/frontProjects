@@ -5,10 +5,12 @@ export function recommendStaffPick(
   staffPickTitleText,
   staffPickFooterText
 ) {
+  // 헤더 생성
   const staffPickHeader = document.createElement("h4");
   staffPickHeader.className = "staff-pick-header";
   staffPickHeader.textContent = staffPickHeaderText;
 
+  // 섹션 생성
   const staffPickSection = document.createElement("div");
   staffPickSection.className = "staff-pick-section";
 
@@ -40,7 +42,7 @@ export function recommendStaffPick(
   staffPickSection.appendChild(staffPickProfileSection);
   staffPickSection.appendChild(staffPickItem);
 
-  // footer
+  // 푸터 생성
   const staffPickFooter = document.createElement("div");
   staffPickFooter.className = "staff-pick-footer";
   staffPickFooter.textContent = staffPickFooterText;
