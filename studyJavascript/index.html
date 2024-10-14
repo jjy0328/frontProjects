@@ -9,12 +9,22 @@
 
     <title>potato-coding</title>
 
-    <link rel="stylesheet" href=reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="reveal.js/dist/reset.css" />
     <link rel="stylesheet" href="reveal.js/dist/reveal.css" />
     <link rel="stylesheet" href="reveal.js/dist/theme/dracula.css" />
 
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts: Black Han Sans for Korean -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap" rel="stylesheet">
+
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="reveal.js/plugin/highlight/zenburn.css" />
   </head>
   <body>
     <div class="reveal">
@@ -31,8 +41,7 @@
         </section>
 
         <!-- Placeholder for the Table of Contents slide -->
-        <!-- <section id="table-of-contents-slide"></section>
-         -->
+
         <section
           data-auto-animate
           style="
@@ -64,6 +73,129 @@
             <li>Function</li>
           </ul>
         </section>
+
+        <!-- chapter 1 -->
+        <section data-markdown>
+          <textarea data-template>
+                ### <span class="js-title">Introduction to JavaScript</span>  
+                #### <span class="js-title-kr">자바스크립트의 개념</span>
+            </textarea
+          >
+        </section>
+
+        <!-- 텍스트와 코드가 같은 페이지에 나오는 섹션 -->
+        <section>
+            <section data-auto-animate>
+                <!-- 텍스트 섹션 -->
+                <div style="text-align: left;">
+                <span class="js-description">1. 모든 웹 브라우저에서 작동한다.</span></br>
+                <span class="js-description">2. 실행 결과를 즉시 확인할 수 있다.</span></br>
+                <span class="js-description">3. 풀스택 웹 개발 뿐만 아니라 다양한 용도의 프로그램을 만들 수 있다.</span></br>
+                <!-- 코드 섹션 -->
+                <pre data-id="code-animation"><code data-trim data-line-numbers>
+
+                    // 1. http 모듈을 가져옵니다.
+                    const http = require('http');
+
+                </code></pre>
+
+                <span class="js-description">4. 다양한 라이브러리와 프레임워크를 사용할 수 있다.</span>
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <!-- 텍스트 섹션 -->
+                <div style="text-align: left;">
+                <span class="js-description">1. 모든 웹 브라우저에서 작동한다.</span></br>
+                <span class="js-description">2. 실행 결과를 즉시 확인할 수 있다.</span></br>
+                <span class="js-description">3. 풀스택 웹 개발 뿐만 아니라 다양한 용도의 프로그램을 만들 수 있다.</span></br>
+                <span class="js-description-explain">-> HTTP 서버를 만들어, 브라우저로 요청이 들어왔을 때 "Hello, Node.js!"라는 메시지를 응답하는 코드 예시입니다.</span></br>
+                <!-- 코드 섹션 -->
+                <pre data-id="code-animation"><code data-trim data-line-numbers>
+
+                    // 1. http 모듈을 가져옵니다.
+                    const http = require('http');
+                    
+                    // 2. 서버를 생성합니다.
+                    const server = http.createServer((req, res) => {
+                    // 3. 응답 헤더 설정 (200: 성공 상태, Content-Type: 텍스트)
+                    res.writeHead(200, { 'Content-Type': 'text/plain' });
+                    
+                    // 4. 브라우저로 "Hello, Node.js!" 메시지를 보냅니다.
+                    res.end('Hello, Node.js!\n');
+                    });
+                    
+                    // 5. 서버가 3000번 포트에서 요청 대기 중임을 알립니다.
+                    server.listen(3000, () => {
+                    console.log('Server running at http://localhost:3000/');
+                    });
+
+                </code></pre>
+
+                <span class="js-description">4. 다양한 라이브러리와 프레임워크를 사용할 수 있다.</span>
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <!-- 텍스트 섹션 -->
+                <div style="text-align: left;">
+                <span class="js-description">1. 모든 웹 브라우저에서 작동한다.</span></br>
+                <span class="js-description">2. 실행 결과를 즉시 확인할 수 있다.</span></br>
+                <span class="js-description">3. 풀스택 웹 개발 뿐만 아니라 다양한 용도의 프로그램을 만들 수 있다.</span></br>
+                <!-- 코드 섹션 -->
+                <pre data-id="code-animation"><code data-trim data-line-numbers>
+
+                    // 1. http 모듈을 가져옵니다.
+                    const http = require('http');
+
+                </code></pre>
+
+                <span class="js-description">4. 다양한 라이브러리와 프레임워크를 사용할 수 있다.</span>
+                <!-- 로고 섹션 -->
+                <div class="logo-container">
+                    <img src="assets/images/facebook-logo-url.png" alt="Facebook" class="logo">
+                    <img src="assets/images/youtube-logo-url.png" alt="YouTube" class="logo">
+                    <img src="assets/images/naver-logo-url.png" alt="Naver" class="logo">
+                  </div>
+                </div>
+            </section>
+        </section>
+        
+        <!-- chapter 2 -->
+        <section data-markdown>
+            <textarea data-template>
+                  ### <span class="js-title">JavaScript Basics</span>  
+                  #### <span class="js-title-kr">기초 - 변수, 자료형, 연산자</span>
+              </textarea
+            >
+          </section>
+
+          <section style="text-align: left;">
+            <section data-markdown>
+                <textarea data-template>
+                    <span class="middle-title"> 입력과 출력</span> <br>
+                    <span class="small-title">1. prompt</span>
+                    <pre><code data-trim data-noescape>
+                        prompt("Enter whatever you want");
+                    </code></pre>
+                    <span class="description-small-title">프롬프트 창이 나타나 사용자에게 값을 입력받는 함수입니다.</span>
+                    <span class="description-small-title">입력하고 싶은 값을 입력 후 확인을 누르면 콘솔창에 입력한 값이 나옵니다.</span>
+
+                    <span class="small-title">2. alert</span></br>
+                    <pre><code data-trim data-noescape>
+                        alert("Happy potato-coding");
+                    </code></pre>
+                    <span class="description-small-title">웹 브라우저에 알림 창이 나타나면서 입력한 내용이 알림 창에 표시되는 것을 볼 수 있습니다.</span>
+
+                    <span class="small-title">3. console.log</span></br>
+                    <pre><code data-trim data-noescape>
+                        console.log("오늘은 즐거운 패밀리 데이");
+                    </code></pre>
+                    <span class="description-small-title">개발자 도구의 콘솔창에 값이 뜨는 것을 볼 수 있습니다.</span></br>
+                  </textarea
+                >
+              </section>
+          </section>
       </div>
     </div>
 

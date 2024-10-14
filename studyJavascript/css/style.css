@@ -1,0 +1,63 @@
+/* 자바스크립트의 개념 텍스트 색상과 폰트 설정 */
+.js-title-kr {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #e1afd1;
+}
+
+.js-description {
+  font-family: "Jua", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+}
+
+.js-description-explain {
+  font-family: "Jua", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 0.2;
+}
+
+pre code {
+  font-size: 12px; /* 코드 블록의 폰트 크기 설정 */
+  /* white-space: pre-line; */
+}
+
+pre[data-id="code-animation"] {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* 로고들을 동일한 크기와 간격으로 배치하는 스타일 */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.middle-title {
+  font-family: "Jua", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  color: #7bc9ff;
+}
+
+.small-title {
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  color: #b1afff;
+}
+
+.description-small-title {
+  font-family: "Jua", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 0.7 !important;
+}
