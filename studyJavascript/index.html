@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>potato-coding</title>
+
+    <link rel="stylesheet" href=reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="reveal.js/dist/theme/dracula.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-auto-animate>
+          <h3 style="margin-bottom: 100px; color: #cdc1ff">
+            Let's learn about JavaScript
+          </h3>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Let's learn about JavaScript</h3>
+          with potato-coding
+        </section>
+
+        <!-- Placeholder for the Table of Contents slide -->
+        <!-- <section id="table-of-contents-slide"></section>
+         -->
+        <section
+          data-auto-animate
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+          "
+        >
+          <h6 style="margin-bottom: 30px; text-align: left; flex: 1">
+            Table of Contents
+          </h6>
+        </section>
+
+        <section
+          data-auto-animate
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+          "
+        >
+          <h6 style="margin-bottom: 30px; text-align: left; flex: 1">
+            Table of Contents
+          </h6>
+          <ul style="flex: 1; list-style-position: outside; font-size: 25px">
+            <li>Introduction to JavaScript</li>
+            <li>JavaScript Basics</li>
+            <li>Control Statements</li>
+            <li>Function</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="reveal.js/dist/reveal.js"></script>
+    <script src="reveal.js/plugin/notes/notes.js"></script>
+    <script src="reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+
+      // Function to load external slides using AJAX
+      function loadExternalSlide(elementId, filePath) {
+        fetch(filePath)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          })
+          .catch((error) => console.error(`Error loading ${filePath}:`, error));
+      }
+
+      loadExternalSlide(
+        "table-of-contents-slide",
+        "slides/table-of-contents.html"
+      );
+    </script>
+  </body>
+</html>
