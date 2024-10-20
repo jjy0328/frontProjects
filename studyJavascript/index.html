@@ -223,8 +223,12 @@
                 <pre><code data-trim data-noescape>
                     prompt("Enter whatever you want");
                 </code></pre>
-                <span class="description-small-title">프롬프트 창이 나타나 사용자에게 값을 입력받는 함수입니다.</span>
-                <span class="description-small-title">입력하고 싶은 값을 입력 후 확인을 누르면 콘솔창에 입력한 값이 나옵니다.</span>
+                <p class="description-small-title">
+                    프롬프트 창이 나타나 사용자에게 값을 입력받는 함수입니다.
+                  </p>
+                  <p class="description-small-title">
+                    입력하고 싶은 값을 입력 후 확인을 누르면 콘솔창에 입력한 값이 나옵니다.
+                  </p>
 
                 <span class="small-title">2. alert</span><br>
                 <pre><code data-trim data-noescape>
@@ -289,7 +293,7 @@
                 >전역 혹은 함수 범위로 지정됩니다.</span
               >
             </span>
-            <pre><code  code data-trim data-line-numbers="2-7|8-9|12-15|17-18">
+            <pre><code  code data-trim data-line-numbers="1-5|7-8|10-14|16-17">
                 // Global Scope(전역범위) 예시
                 var globalVar = "I am a global variable";
                 function checkGlobalVar() {
@@ -321,8 +325,204 @@
                 var name = "Aone";
                 console.log(name);
                 </code></pre>
+
+            <span class="description-small-title"
+              >콘솔에 어떻게 찍힐지 맞춰보세요!</span
+            >
+          </section>
+
+          <section style="text-align: left">
+            <span class="middle-title">2. let</span><br />
+            <span class="description-small-title"
+              >let은
+              <span style="color: #b1afff">{} 블록 안에서만 유효하게 사용</span
+              >할 수 있는 선언방식입니다.</span
+            >
+            <pre><code code data-trim data-line-numbers>
+                let greeting = "say Hi";
+                let times = 4;
+
+                if (times > 3) {
+                        let hello = "say Hello instead";
+                        console.log(hello);
+                    }
+                console.log(hello)
+                </code></pre>
+
+            <span class="description-small-title"
+              >let은 재선언은 가능하나
+              <span style="color: #b1afff"
+                >범위 내에서 다시 선언을 할 순 없습니다.</span
+              ></span
+            >
+            <pre><code code data-trim data-line-numbers>
+                // 재선언
+                let greeting = "say Hi";
+                greeting = "say Hello instead";
+
+                // 같은 변수로 재선언
+                let greeting = "say Hi";
+                let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
+                </code></pre>
+          </section>
+
+          <section style="text-align: left">
+            <span class="middle-title">3. const</span><br />
+            <p class="description-small-title">
+              const는 변수를 <span style="color: #b1afff">상수로 선언</span>하기
+              때문에, <span style="color: #b1afff">한 번 값을 할당하면</span>
+              재할당할 수 없습니다.
+            </p>
+
+            <p class="description-small-title">
+              따라서
+              <span style="color: #b1afff">변수 선언 시 즉시 초기화가 필요</span
+              >하며, 다음 두 가지 작업은 불가능합니다.
+            </p>
+            <pre><code code data-trim data-line-numbers>
+                // 초기화를 하지 않고 선언하는 경우
+                const age; // SyntaxError: Missing initializer in const declaration
+
+                // 값을 재할당하는 경우
+                const age = 30;
+                age = 31; // TypeError: Assignment to constant variable.
+                </code></pre>
+          </section>
+
+          <section style="text-align: left">
+            <span class="middle-title">3. const</span><br />
+            <p class="description-small-title">
+              만약 object(객체)로 사용하는 경우 해당 객체의 속성은 변경할 수
+              있습니다.
+            </p>
+            <pre><code code data-trim data-line-numbers>
+                const person = {
+                    name: "주영",
+                    age: 27
+                  };
+                  
+                  // 객체의 속성은 수정 가능
+                  person.name = "재희";
+                  person.age = 25;
+                  
+                  console.log(person);
+                </code></pre>
           </section>
         </section>
+
+        <section>
+            <section>
+                <span class="middle-title">자료형</span><br /><br />
+                <div class="text-container" data-id="vars">
+                  <span class="text-item">기본 자료형</span>
+                  <span class="text-item">참조 자료형</span>
+                </div>
+              </section>
+
+            <section>
+            <span class="middle-title">1. 기본 자료형</span><br /><br />
+            <table>
+                <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span style="color: #ACBCFF">String</span></td>
+                    <td>문자열</td>
+                </tr>
+                <tr>
+                    <td><span style="color: #ACBCFF">Number</span></td>
+                    <td>정수와 부동 소수점을 포함한 숫자</td>
+                </tr>
+                <tr>
+                    <td><span style="color: #ACBCFF">Boolean</span></td>
+                    <td>true / false</td>
+                </tr>
+                <tr>
+                    <td><span style="color: #ACBCFF">Undefined</span></td>
+                    <td>
+                    변수를 선언만 하고 값을 할당하지 않은 경우 undefined가 할당
+                    </td>
+                </tr>
+                <tr>
+                    <td><span style="color: #ACBCFF">Null</td>
+                    <td>의도적으로 “값 없음”을 의미함</td>
+                </tr>
+                </tbody>
+            </table><br />
+
+            <div class="code-container">
+                <span class="small-title" style="margin-left: 20px;"
+                    >undefined</span
+                >
+                <pre><code code data-trim data-line-numbers>
+                let empty;
+                console.log(empty);
+                </code></pre>
+            </div>
+        
+            <div class="code-container">
+                <span class="small-title" style="margin-left: 20px;"
+                    >null</span
+                >
+                <pre><code code data-trim data-line-numbers>
+                let nothing = null;
+                console.log(nothing);
+                </code></pre>
+            </div>
+            </section>
+
+            <section>
+                <span class="middle-title">2. 참조 자료형</span><br /><br />
+                <div class="code-container">
+                    <div style="margin-left: 20px;">
+                        <span class="small-title"
+                            >1) Object</span
+                        >
+                        <p class="description-small-title">여러 속성을 갖는 키-값 쌍을 저장하는 자료형입니다.</p>
+                    </div>
+                    <pre><code code data-trim data-line-numbers>
+                        let person = {
+                            name: "potato",
+                            age: 27,
+                            city: "Seoul"
+                          };
+                          console.log(person.name);
+                    </code></pre>
+                </div>
+
+                <div class="code-container">
+                    <div style="margin-left: 20px;">
+                        <span class="small-title"
+                            >2) Array</span
+                        >
+                        <p class="description-small-title">
+                            배열은 순서가 있는 데이터의 집합으로
+                          </p>
+                          <p class="description-small-title">
+                            여러 값을 한 번에 저장 가능합니다.
+                          </p>
+                    </div>
+                    <pre><code code data-trim data-line-numbers>
+                        let fruits = ["Apple", "Banana", "Cherry"];
+                        console.log(fruits[0]);
+                    </code></pre>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <span class="middle-title">연산자</span><br /><br />
+                <div class="text-container" data-id="vars">
+                <span class="text-item">산술 연산자</span>
+                <span class="text-item">비교 연산자</span>
+                <span class="text-item">논리 연산자</span>
+                </div>
+            </section>
+        </section> 
       </div>
     </div>
 
@@ -336,15 +536,15 @@
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       });
 
-      // Function to load external slides using AJAX
-      function loadExternalSlide(elementId, filePath) {
-        fetch(filePath)
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById(elementId).innerHTML = data;
-          })
-          .catch((error) => console.error(`Error loading ${filePath}:`, error));
-      }
+      //   // Function to load external slides using AJAX
+      //   function loadExternalSlide(elementId, filePath) {
+      //     fetch(filePath)
+      //       .then((response) => response.text())
+      //       .then((data) => {
+      //         document.getElementById(elementId).innerHTML = data;
+      //       })
+      //       .catch((error) => console.error(Error loading ${filePath}:, error));
+      //   }
 
       loadExternalSlide(
         "table-of-contents-slide",
