@@ -515,14 +515,150 @@
         </section>
         <section>
             <section>
-                <span class="middle-title">연산자</span><br /><br />
+                <span class="middle-title">연산자</span>
                 <div class="text-container" data-id="vars">
                 <span class="text-item">산술 연산자</span>
                 <span class="text-item">비교 연산자</span>
                 <span class="text-item">논리 연산자</span>
                 </div>
             </section>
+
+            <section>
+              <div class="code-container" data-id="vars">
+                <div>
+                    <span class="small-title"
+                        >1) 산술 연산자</span
+                    >
+                </div><br />
+                <table>
+                  <thead>
+                  <tr>
+                      <th>연산자</th>
+                      <th>설명</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <td><span style="color: #ACBCFF">+</span></td>
+                      <td>덧셈</td>
+                  </tr>
+                  <tr>
+                      <td><span style="color: #ACBCFF">-</span></td>
+                      <td>뺄셈</td>
+                  </tr>
+                  <tr>
+                      <td><span style="color: #ACBCFF">*</span></td>
+                      <td>곱셈</td>
+                  </tr>
+                  <tr>
+                      <td><span style="color: #ACBCFF">/</span></td>
+                      <td>
+                      나눗셈
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><span style="color: #ACBCFF">%</td>
+                      <td>나머지값</td>
+                  </tr>
+                  </tbody>
+              </table><br />
+            </div>
+
+            <div class="code-container" data-id="vars">
+                <div style="margin-left: 20px;">
+                    <span class="small-title"
+                        >2) 논리 연산자</span
+                    >
+                </div>
+                <table>
+                  <thead>
+                  <tr>
+                      <th>연산자</th>
+                      <th>설명</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                      <td><span style="color: #ACBCFF">&&</span></td>
+                      <td>AND</td>
+                  </tr>
+                  <tr>
+                      <td><span style="color: #ACBCFF">||</span></td>
+                      <td>OR</td>
+                  </tr>
+                  <tr>
+                      <td><span style="color: #ACBCFF">!</span></td>
+                      <td>NOT</td>
+                  </tr>
+                  </tbody>
+              </table>
+            </div><br />
+            <pre><code code data-trim data-line-numbers>
+              let goHome = true;
+              let workLate = false;
+
+              console.log(goHome && workLate);
+              console.log(goHome || workLate);
+              console.log(!workLate);
+              </code></pre>
+            </section>
+
+            <section data-auto-animate>
+              <span class="small-title">3) 비교 연산자</span><br />
+              <span class="description-small-title">
+                두 값을 비교하는 데 사용됩니다.
+                <span style="color: #b1afff">결과는 true 또는 false입니다.</span>
+              </span>
+              <br /><br />
+              <table>
+                <thead>
+                  <tr>
+                    <th>연산자</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span style="color: #ACBCFF">==</span></td>
+                    <td>값이 같은지 비교</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: #ACBCFF">===</span></td>
+                    <td>값과 타입이 모두 같은지 비교</td>
+                  </tr>
+                  <!-- 나머지 행 생략 -->
+                </tbody>
+              </table><br />
+            </section>
+            
+            <section data-auto-animate>
+              <span class="small-title">3) 비교 연산자</span><br />
+              <span class="description-small-title">
+                두 값을 비교하는 데 사용됩니다.
+                <span style="color: #b1afff">결과는 true 또는 false입니다.</span>
+              </span>
+              <br /><br />
+              <pre><code code data-trim data-line-numbers>
+                let x = 5;
+                let y = "5";
+                
+                console.log(x == y); // true (값만 비교)
+                console.log(x === y); // false (값과 타입을 모두 비교)
+                
+                console.log(x != y); // false (값만 비교)
+                console.log(x !== y); // true (값과 타입을 모두 비교)
+              </code></pre>
+            </section>
         </section> 
+
+         <!-- chapter 3 -->
+         <section data-markdown>
+          <textarea data-template>
+                  ### <span class="js-title">Control Statements</span>  
+                  #### <span class="js-title-kr">제어문 - if문, for문, while문, switch문</span>
+              </textarea
+          >
+        </section>
       </div>
     </div>
 
