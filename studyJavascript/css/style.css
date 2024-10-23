@@ -119,3 +119,18 @@ table {
   margin-right: 20px; /* 두 코드 블록 사이 간격 */
   text-align: left;
 }
+
+.arrow-container {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 10%; /* 화살표가 위치할 공간 */
+  font-size: 30px; /* 화살표 크기 조정 */
+  color: #f2afef; /* 화살표 색상 */
+  margin-left: -60px;
+}
+
+.arrow {
+  display: inline-block;
+  transform: translateY(50%); /* 수직 가운데 정렬 */
+}
