@@ -939,8 +939,54 @@
                 </div>
           </textarea>
         </section>
-        
       </section>
+
+      <section>
+        <section>
+          <span class="middle-title">Quiz</span><br/>
+          <p class="description-small-title">
+            구구단중 짝수단만 나오게 자바스크립트를 이용하여 이븐하게 만들어 보게나.
+          </p>
+        </section>
+
+        <section>
+          <span class="middle-title">Answer</span>
+          </span><br/>
+          <div class="code-container" data-id="vars">
+            <pre><code code data-trim data-line-numbers>
+              function evenGugudan() {
+                for (var i = 1; i < 9; i++) {
+                  if (i % 2 == 0) {
+                    for (var j = 1; j < 9; j++) {
+                      document.write(i + ' x ' + j + ' = ' + i * j);
+                      document.write("<br/>");
+                    }
+                    document.write("--------<br/>");
+                  }
+                }
+              }
+              
+              evenGugudan();
+            </code></pre>
+          </div>
+          <div class="code-container" data-id="vars">
+            <pre><code code data-trim data-line-numbers>
+              function multiplicationTable() {
+                for (let i = 2; i < 10; i += 2) {
+                  for (let j = 1; j < 9; j++) {
+                    document.writeln(`${i} * ${j} = ${i * j}`);
+                    document.writeln("<br/>");
+                  }
+                  document.writeln("--------");
+                  document.writeln("<br/>");
+                }
+              }
+              
+              multiplicationTable();
+            </code></pre>
+          </div>
+        </section>
+    </section>
       </div>
     </div>
 
